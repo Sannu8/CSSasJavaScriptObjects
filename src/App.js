@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import styles from './style.css.js';
+import styles from './style.css';
+import CssModules from 'react-css-modules';
+
 
 class App extends Component {
   render() {
@@ -14,11 +16,11 @@ class App extends Component {
         </header>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
-          <button style={styles.button}>Submit</button>
+          <button styleName='button'>Submit</button>
         </p>
       </div>
     );
   }
 }
 
-export default App;
+export default CssModules(App, styles);
